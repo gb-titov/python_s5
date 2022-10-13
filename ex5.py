@@ -8,8 +8,4 @@ enc_str = RLE.encrypt(text)
 print('Зашифрованная строка: ' + enc_str)
 
 print('Расшифрованная строка: ' + RLE.decrypt(enc_str))
-        
-
-
-
-        
+              

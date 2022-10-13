@@ -5,13 +5,13 @@ class RLE:
         chr = text[0]
         enc_str = ''
         counter = 1
-        for c in text:
-            if c == chr:
+        for c in range(1, len(text)):
+            if text[c] == chr:
                 counter +=1
                 continue
             enc_str+=str(counter)
             enc_str+=str(chr)
-            chr = c
+            chr = text[c]
             counter = 1
         enc_str+=str(counter)
         enc_str+=chr
@@ -28,5 +28,3 @@ class RLE:
             new_str+=c*count
             count = 0
         return new_str
-
-    
