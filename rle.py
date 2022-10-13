@@ -20,11 +20,11 @@ class RLE:
 
     def decrypt(text):
         new_str = ''
-        count = 0
+        count = ''
         for c in text:
             if c.isdigit():
-                count = int(c)
+                count += c
                 continue
-            new_str+=c*count
-            count = 0
+            new_str += c * int(count)
+            count = ''
         return new_str
